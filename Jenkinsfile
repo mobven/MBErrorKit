@@ -23,17 +23,17 @@ def sendMail(userMail){
 
 node {
     // def committerEmail = sh (
-    //     script: 'git --no-pager show -s --format=\'%ae\'',
-    //     returnStdout: true
-    // ).trim();
+        script: 'git --no-pager show -s --format=\'%ae\'',
+        returnStdout: true
+    ).trim();
 
-    // def committerName = sh (
-    //     script: 'git --no-pager show -s --format=\'%an\'',
-    //     returnStdout: true
-    // ).trim();
+    def committerName = sh (
+        script: 'git --no-pager show -s --format=\'%an\'',
+        returnStdout: true
+    ).trim();
 
-    def committerEmail = "onur.polat@mobven.com";
-    def committerName = "Onur POLAT";
+    // def committerEmail = "onur.polat@mobven.com";
+    // def committerName = "Onur POLAT";
     def ts = "";
     def PROJECT_ICON = "https://www.amchamksv.org/wp-content/uploads/2018/05/bkt.png";
     def WORKSPACE = pwd();
@@ -67,7 +67,7 @@ node {
     stage ('Test') {
         try {
             sh "bash ${SLACK_SH} '${env.STAGE_NAME}' '${ts}' ${SLACK_DATA}"
-            sh "xcodebuild -scheme UIComponents -sdk iphonesimulator -derivedDataPath Build/ -destination 'platform=iOS Simulator,name=iPhone 11,OS=13.4' test -enableCodeCoverage YES"
+            sh "xcodebuild -scheme ErrorKit -sdk iphonesimulator -derivedDataPath Build/ -destination 'platform=iOS Simulator,name=iPhone 11,OS=13.4' test -enableCodeCoverage YES"
         } catch (e) {
             sh "bash ${SLACK_SH} 'ErrorStage' '${ts}' ${SLACK_DATA}"
             sendMail(committerEmail);
