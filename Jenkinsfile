@@ -22,7 +22,7 @@ def sendMail(userMail){
 }
 
 node {
-    // def committerEmail = sh (
+     def committerEmail = sh (
         script: 'git --no-pager show -s --format=\'%ae\'',
         returnStdout: true
     ).trim();
