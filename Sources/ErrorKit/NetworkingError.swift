@@ -18,19 +18,19 @@ public enum NetworkingError: Error {
     case encodingError(Error, URLRequest)
     
     /// Indicates that request failed while decoding to a `Decodable` object.
-    case decodingError(Error, URLResponse?)
+    case decodingError(Error, URLResponse?, Data?)
     
     /// Indicates a response failed with an invalid `HTTP Status Code`.
-    case httpError(Error?, HTTPURLResponse)
+    case httpError(Error?, HTTPURLResponse, Data?)
     
     /// Indicates a response didn't find `Data`.
     case dataTaskError(URLResponse, Data?)
     
     /// Indicates a response failed due to an underlying `Error`.
-    case underlyingError(Error, URLResponse?)
+    case underlyingError(Error, URLResponse?, Data?)
     
     /// Indicates a response failed unkown`Error`.
-    case unkownError(Error?)
+    case unkownError(Error?, Data?)
 }
 
 public extension NetworkingError {
