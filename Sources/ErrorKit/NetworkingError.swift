@@ -35,6 +35,7 @@ public enum NetworkingError: Error {
 
 public extension NetworkingError {
     
+    /// Title for the error.
     var errorTitle: String {
         switch self {
         case .networkConnectionError: return "Network Connection Error"
@@ -47,31 +48,46 @@ public extension NetworkingError {
         }
     }
     
+    /// `URLResponse` returned within the error.
     var response: URLResponse? {
         switch self {
         case .networkConnectionError: return nil
         case .encodingError: return nil
-        case .decodingError(_, let response): return response
-        case .httpError(_, let response): return response
+        case .decodingError(_, let response, _): return response
+        case .httpError(_, let response, _): return response
         case .dataTaskError(let response, _): return response
-        case .underlyingError(_, let response): return response
+        case .underlyingError(_, let response, _): return response
         case .unkownError: return nil
         }
     }
     
+    /// Data returned within the error.
+    var data: Data? {
+        switch self {
+        case .networkConnectionError: return nil
+        case .encodingError: return nil
+        case .decodingError(_, _, let data): return data
+        case .httpError(_, _, let data): return data
+        case .dataTaskError(_, let data): return data
+        case .underlyingError(_, _, let data): return data
+        case .unkownError(_, let data): return data
+        }
+    }
+    
+    /// Error description.
     var errorDescription: String {
         switch self {
         case .networkConnectionError(let error):
             return "\n Colundn't connect internet network. \n\(error?.localizedDescription ?? "")"
-        case .decodingError(let error, _), .encodingError(let error, _):
+        case .decodingError(let error, _, _), .encodingError(let error, _):
             return error.localizedDescription
-        case .httpError(let error, let response):
+        case .httpError(let error, let response, _):
             return "\nStatus Code: \(response.statusCode.description) \n\(error?.localizedDescription ?? "")\n"
         case .dataTaskError:
             return "Couldn't find data."
-        case .underlyingError(let error, _):
+        case .underlyingError(let error, _, _):
             return error.localizedDescription
-        case .unkownError(let error):
+        case .unkownError(let error, _):
             return error?.localizedDescription ?? "Unkown Error"
         }
     }
