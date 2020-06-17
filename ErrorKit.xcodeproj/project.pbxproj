@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6D818F10249A02DF008943A1 /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D818F0F249A02DF008943A1 /* NetworkingError.swift */; };
+		6D818F5E249A880D008943A1 /* ErrorKitDelegateSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D818F5D249A880D008943A1 /* ErrorKitDelegateSpy.swift */; };
 		6DBA5530248E6C5400751941 /* ErrorKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DBA5526248E6C5300751941 /* ErrorKit.framework */; };
 		6DBA5537248E6C5400751941 /* ErrorKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 6DBA5529248E6C5300751941 /* ErrorKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6DBA554A248E6CC800751941 /* ErrorKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA5545248E6CA300751941 /* ErrorKitTests.swift */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		6D818F0F249A02DF008943A1 /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
+		6D818F5D249A880D008943A1 /* ErrorKitDelegateSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorKitDelegateSpy.swift; sourceTree = "<group>"; };
 		6DBA5526248E6C5300751941 /* ErrorKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ErrorKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DBA5529248E6C5300751941 /* ErrorKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ErrorKit.h; sourceTree = "<group>"; };
 		6DBA552A248E6C5300751941 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 			children = (
 				6DBA5546248E6CA300751941 /* XCTestManifests.swift */,
 				6DBA5545248E6CA300751941 /* ErrorKitTests.swift */,
+				6D818F5D249A880D008943A1 /* ErrorKitDelegateSpy.swift */,
 			);
 			path = ErrorKitTests;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D818F5E249A880D008943A1 /* ErrorKitDelegateSpy.swift in Sources */,
 				6D818F10249A02DF008943A1 /* NetworkingError.swift in Sources */,
 				6DBA554B248E6CE300751941 /* ErrorKit.swift in Sources */,
 			);
