@@ -22,11 +22,11 @@ extension ErrorKit: MBComponent {
 public protocol ErrorKitDelegate: class {
     /// `ErrorKit` caught a networking error.
     /// - parameter networkingError: Networking error.
-    func errorKitDidCatch(networkingError: Error)
+    func errorKitDidCatch(networkingError: NetworkingError)
     
     /// `ErrorKit` caught a JSON (de-)serialization error.
     /// - parameter serializationError: Serialization error.
-    func errorKitDidCatch(serializationError: Error)
+    func errorKitDidCatch(serializationError: NetworkingError)
     
     /// `ErrorKit` caught an encryption/decryption error.
     /// - parameter cryptographyError: Encryption/decryption error.
