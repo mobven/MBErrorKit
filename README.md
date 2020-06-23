@@ -1,9 +1,9 @@
 # ErrorKit
 
-`ErrorKit` is initialized with singleton access to `MMBKit.setup` function. It has a `delegate` for observing error events occurred in your application. You need to listen to its `delegate` when your application starts. Ideally, it's Scene Delegate's `scene(_, willConnectTo:)` (alternatively, App Delegate's `didFinishLaunchingWithOptions`) function.
+`ErrorKit` is initialized with singleton access to `MobKit.setup` function. It has a `delegate` for observing error events occurred in your application. You need to listen to its `delegate` when your application starts. Ideally, it's Scene Delegate's `scene(_, willConnectTo:)` (alternatively, App Delegate's `didFinishLaunchingWithOptions`) function.
 ```swift
 import UIKit
-import MMBKit
+import MobKit
 import ErrorKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
@@ -12,8 +12,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                willConnectTo session: UISceneSession,
                options connectionOptions: UIScene.ConnectionOptions) {
         guard let _ = (scene as? UIWindowScene) else { return }
-        MMBKit.setup(with: [ErrorKit.shared])
-        ErrorKit.shared.delegate = self
+        MobKit.setup(with: [ErrorKit.shared()])
+        ErrorKit.shared().delegate = self
     }
     ...
 }
