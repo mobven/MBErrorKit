@@ -15,14 +15,14 @@ class ErrorKitTests: XCTestCase {
     
     override func setUp() {
         errorKitDelegate = ErrorKitDelegateSpy()
-        ErrorKit.shared.delegate = errorKitDelegate
+        ErrorKit.shared().delegate = errorKitDelegate
     }
     
     func testDelegateNetworkingError() {
         let error = NetworkingError.networkConnectionError(
             NSError(domain: "test", code: 2, userInfo: nil)
         )
-        ErrorKit.shared.delegate?.errorKitDidCatch(networkingError: error)
+        ErrorKit.shared().delegate?.errorKitDidCatch(networkingError: error)
         XCTAssertEqual(errorKitDelegate.networkingError?.errorDescription, error.errorDescription)
         XCTAssertEqual(errorKitDelegate.networkingError?.data, error.data)
         XCTAssertEqual(errorKitDelegate.networkingError?.response, error.response)
@@ -33,7 +33,7 @@ class ErrorKitTests: XCTestCase {
         let error = NetworkingError.decodingError(
             NSError(domain: "test", code: 2, userInfo: nil), nil, nil
         )
-        ErrorKit.shared.delegate?.errorKitDidCatch(serializationError: error)
+        ErrorKit.shared().delegate?.errorKitDidCatch(serializationError: error)
         XCTAssertEqual(errorKitDelegate.serializationError?.errorDescription, error.errorDescription)
         XCTAssertEqual(errorKitDelegate.serializationError?.data, error.data)
         XCTAssertEqual(errorKitDelegate.serializationError?.response, error.response)
@@ -42,7 +42,7 @@ class ErrorKitTests: XCTestCase {
     
     func testDelegateCryptographyError() {
         let error = NSError(domain: "test", code: 2, userInfo: nil)
-        ErrorKit.shared.delegate?.errorKitDidCatch(cryptographyError: error)
+        ErrorKit.shared().delegate?.errorKitDidCatch(cryptographyError: error)
         XCTAssertEqual(errorKitDelegate.cryptographyError?.localizedDescription, error.localizedDescription)
     }
     

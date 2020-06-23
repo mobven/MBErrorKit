@@ -7,16 +7,7 @@
 //
 
 import Foundation
-import MMBKit
-
-// MARK: - Setup
-extension ErrorKit: MBComponent {
-    
-    public func setup() {
-        
-    }
-    
-}
+import MobKit
 
 /// Delegation for `ErrorKit` errors.
 public protocol ErrorKitDelegate: class {
@@ -34,10 +25,28 @@ public protocol ErrorKitDelegate: class {
 }
 
 /// Manager for ErrorKit.
-public class ErrorKit {
+public class ErrorKit: MobKitComponent {
     
     /// `ErrorKit` singleton instance.
-    public static let shared: ErrorKit = ErrorKit()
+    static var instance: ErrorKit?
+    /// `AppSecurity` singleton instance.
+    public override class func shared() -> Self {
+        if instance == nil {
+            self.instance = ErrorKit()
+        }
+        guard let sharedInstance = self.instance as? Self else {
+            fatalError("Could not cast ErrorKit")
+        }
+        return sharedInstance
+    }
+    
+    override init() {
+        super.init()
+    }
+    
+    public override func setup() {
+        
+    }
     
     /// Delegation for errors.
     public weak var delegate: ErrorKitDelegate?
