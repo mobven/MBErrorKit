@@ -2,11 +2,11 @@
   "object": {
     "pins": [
       {
-        "package": "MMBKit",
-        "repositoryURL": "https://github.com/mobven/MMBKit.git",
+        "package": "MobKit",
+        "repositoryURL": "https://github.com/mobven/MobKit.git",
         "state": {
           "branch": "develop",
-          "revision": "7ac0c1904a2e6f1acacf84fa79ffb497925d57ae",
+          "revision": "bd947e3d7742c5fbe0aa7cf37dadd57e6a47a44b",
           "version": null
         }
       }
