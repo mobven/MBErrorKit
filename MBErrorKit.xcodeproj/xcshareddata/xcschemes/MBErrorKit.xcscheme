@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6DBA5525248E6C5300751941"
-               BuildableName = "ErrorKit.framework"
-               BlueprintName = "ErrorKit"
-               ReferencedContainer = "container:ErrorKit.xcodeproj">
+               BuildableName = "MBErrorKit.framework"
+               BlueprintName = "MBErrorKit"
+               ReferencedContainer = "container:MBErrorKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6DBA5525248E6C5300751941"
-            BuildableName = "ErrorKit.framework"
-            BlueprintName = "ErrorKit"
-            ReferencedContainer = "container:ErrorKit.xcodeproj">
+            BuildableName = "MBErrorKit.framework"
+            BlueprintName = "MBErrorKit"
+            ReferencedContainer = "container:MBErrorKit.xcodeproj">
          </BuildableReference>
       </CodeCoverageTargets>
       <Testables>
@@ -44,9 +44,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6DBA552E248E6C5400751941"
-               BuildableName = "ErrorKitTests.xctest"
-               BlueprintName = "ErrorKitTests"
-               ReferencedContainer = "container:ErrorKit.xcodeproj">
+               BuildableName = "MBErrorKitTests.xctest"
+               BlueprintName = "MBErrorKitTests"
+               ReferencedContainer = "container:MBErrorKit.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6DBA5525248E6C5300751941"
-            BuildableName = "ErrorKit.framework"
-            BlueprintName = "ErrorKit"
-            ReferencedContainer = "container:ErrorKit.xcodeproj">
+            BuildableName = "MBErrorKit.framework"
+            BlueprintName = "MBErrorKit"
+            ReferencedContainer = "container:MBErrorKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
