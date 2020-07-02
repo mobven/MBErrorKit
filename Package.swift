@@ -4,15 +4,15 @@
 import PackageDescription
 
 let package = Package(
-    name: "ErrorKit",
+    name: "MBErrorKit",
     platforms: [
         .iOS(.v10)
     ],
     products: [
         // Products define the executables and libraries produced by a package, and make them visible to other packages.
         .library(
-            name: "ErrorKit",
-            targets: ["ErrorKit"])
+            name: "MBErrorKit",
+            targets: ["MBErrorKit"])
     ],
     dependencies: [
         .package(url: "https://github.com/mobven/MobKit.git", .branch("develop"))
@@ -22,10 +22,10 @@ let package = Package(
         // Targets can depend on other targets in this package,
         // and on products in packages which this package depends on.
         .target(
-            name: "ErrorKit",
-            dependencies: ["MobKit"]),
+            name: "MBErrorKit",
+            dependencies: ["MobKitCore"]),
         .testTarget(
-            name: "ErrorKitTests",
-            dependencies: ["ErrorKit"])
+            name: "MBErrorKitTests",
+            dependencies: ["MBErrorKit"])
     ]
 )

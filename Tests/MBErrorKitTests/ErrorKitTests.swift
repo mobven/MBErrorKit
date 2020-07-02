@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import ErrorKit
+@testable import MBErrorKit
 
 class ErrorKitTests: XCTestCase {
     

@@ -3,7 +3,7 @@
 `ErrorKit` is initialized with singleton access to `MobKit.setup` function. It has a `delegate` for observing error events occurred in your application. You need to listen to its `delegate` when your application starts. Ideally, it's Scene Delegate's `scene(_, willConnectTo:)` (alternatively, App Delegate's `didFinishLaunchingWithOptions`) function.
 ```swift
 import UIKit
-import MobKit
+import MobKitCore
 import ErrorKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {

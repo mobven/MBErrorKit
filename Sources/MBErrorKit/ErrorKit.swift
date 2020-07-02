@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import MobKit
+import MobKitCore
 
 /// Delegation for `ErrorKit` errors.
 public protocol ErrorKitDelegate: class {

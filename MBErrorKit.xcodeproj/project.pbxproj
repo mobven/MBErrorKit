@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D78361424AE27F3009F414E /* MobKitCore in Frameworks */ = {isa = PBXBuildFile; productRef = 6D78361324AE27F3009F414E /* MobKitCore */; };
 		6D818F10249A02DF008943A1 /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D818F0F249A02DF008943A1 /* NetworkingError.swift */; };
 		6D818F5E249A880D008943A1 /* ErrorKitDelegateSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D818F5D249A880D008943A1 /* ErrorKitDelegateSpy.swift */; };
 		6DBA5530248E6C5400751941 /* MBErrorKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DBA5526248E6C5300751941 /* MBErrorKit.framework */; };
 		6DBA5537248E6C5400751941 /* ErrorKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 6DBA5529248E6C5300751941 /* ErrorKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6DBA554A248E6CC800751941 /* ErrorKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA5545248E6CA300751941 /* ErrorKitTests.swift */; };
 		6DBA554B248E6CE300751941 /* ErrorKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA5542248E6CA300751941 /* ErrorKit.swift */; };
-		6F58DB8624A1FDC500B23D79 /* MobKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6F58DB8524A1FDC500B23D79 /* MobKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F58DB8624A1FDC500B23D79 /* MobKit in Frameworks */,
+				6D78361424AE27F3009F414E /* MobKitCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,37 +104,37 @@
 		6DBA5540248E6CA300751941 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				6DBA5541248E6CA300751941 /* ErrorKit */,
+				6DBA5541248E6CA300751941 /* MBErrorKit */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
 		};
-		6DBA5541248E6CA300751941 /* ErrorKit */ = {
+		6DBA5541248E6CA300751941 /* MBErrorKit */ = {
 			isa = PBXGroup;
 			children = (
 				6DBA5542248E6CA300751941 /* ErrorKit.swift */,
 				6D818F0F249A02DF008943A1 /* NetworkingError.swift */,
 			);
-			path = ErrorKit;
+			path = MBErrorKit;
 			sourceTree = "<group>";
 		};
 		6DBA5543248E6CA300751941 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				6DBA5547248E6CA300751941 /* LinuxMain.swift */,
-				6DBA5544248E6CA300751941 /* ErrorKitTests */,
+				6DBA5544248E6CA300751941 /* MBErrorKitTests */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
 		};
-		6DBA5544248E6CA300751941 /* ErrorKitTests */ = {
+		6DBA5544248E6CA300751941 /* MBErrorKitTests */ = {
 			isa = PBXGroup;
 			children = (
 				6DBA5546248E6CA300751941 /* XCTestManifests.swift */,
 				6DBA5545248E6CA300751941 /* ErrorKitTests.swift */,
 				6D818F5D249A880D008943A1 /* ErrorKitDelegateSpy.swift */,
 			);
-			path = ErrorKitTests;
+			path = MBErrorKitTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,7 +167,7 @@
 			);
 			name = MBErrorKit;
 			packageProductDependencies = (
-				6F58DB8524A1FDC500B23D79 /* MobKit */,
+				6D78361324AE27F3009F414E /* MobKitCore */,
 			);
 			productName = ErrorKit;
 			productReference = 6DBA5526248E6C5300751941 /* MBErrorKit.framework */;
@@ -219,7 +219,7 @@
 			);
 			mainGroup = 6DBA551C248E6C5300751941;
 			packageReferences = (
-				6F58DB8424A1FDC500B23D79 /* XCRemoteSwiftPackageReference "MobKit" */,
+				6D78361224AE27F3009F414E /* XCRemoteSwiftPackageReference "MobKit" */,
 			);
 			productRefGroup = 6DBA5527248E6C5300751941 /* Products */;
 			projectDirPath = "";
@@ -540,7 +540,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		6F58DB8424A1FDC500B23D79 /* XCRemoteSwiftPackageReference "MobKit" */ = {
+		6D78361224AE27F3009F414E /* XCRemoteSwiftPackageReference "MobKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mobven/MobKit.git";
 			requirement = {
@@ -551,10 +551,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		6F58DB8524A1FDC500B23D79 /* MobKit */ = {
+		6D78361324AE27F3009F414E /* MobKitCore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 6F58DB8424A1FDC500B23D79 /* XCRemoteSwiftPackageReference "MobKit" */;
-			productName = MobKit;
+			package = 6D78361224AE27F3009F414E /* XCRemoteSwiftPackageReference "MobKit" */;
+			productName = MobKitCore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
