@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6D78361424AE27F3009F414E /* MobKitCore in Frameworks */ = {isa = PBXBuildFile; productRef = 6D78361324AE27F3009F414E /* MobKitCore */; };
+		6D78361F24AE2B1E009F414E /* MobKitCore in Frameworks */ = {isa = PBXBuildFile; productRef = 6D78361E24AE2B1E009F414E /* MobKitCore */; };
 		6D818F10249A02DF008943A1 /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D818F0F249A02DF008943A1 /* NetworkingError.swift */; };
 		6D818F5E249A880D008943A1 /* ErrorKitDelegateSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D818F5D249A880D008943A1 /* ErrorKitDelegateSpy.swift */; };
 		6DBA5530248E6C5400751941 /* MBErrorKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DBA5526248E6C5300751941 /* MBErrorKit.framework */; };
@@ -47,7 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D78361424AE27F3009F414E /* MobKitCore in Frameworks */,
+				6D78361F24AE2B1E009F414E /* MobKitCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,8 +67,8 @@
 			children = (
 				6DBA5549248E6CA400751941 /* Package.swift */,
 				6DBA5548248E6CA400751941 /* README.md */,
-				6DBA5528248E6C5300751941 /* ErrorKit */,
-				6DBA5533248E6C5400751941 /* ErrorKitTests */,
+				6DBA5528248E6C5300751941 /* MBErrorKit */,
+				6DBA5533248E6C5400751941 /* MBErrorKitTests */,
 				6DBA5540248E6CA300751941 /* Sources */,
 				6DBA5543248E6CA300751941 /* Tests */,
 				6DBA5527248E6C5300751941 /* Products */,
@@ -84,21 +84,21 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6DBA5528248E6C5300751941 /* ErrorKit */ = {
+		6DBA5528248E6C5300751941 /* MBErrorKit */ = {
 			isa = PBXGroup;
 			children = (
 				6DBA5529248E6C5300751941 /* ErrorKit.h */,
 				6DBA552A248E6C5300751941 /* Info.plist */,
 			);
-			path = ErrorKit;
+			path = MBErrorKit;
 			sourceTree = "<group>";
 		};
-		6DBA5533248E6C5400751941 /* ErrorKitTests */ = {
+		6DBA5533248E6C5400751941 /* MBErrorKitTests */ = {
 			isa = PBXGroup;
 			children = (
 				6DBA5536248E6C5400751941 /* Info.plist */,
 			);
-			path = ErrorKitTests;
+			path = MBErrorKitTests;
 			sourceTree = "<group>";
 		};
 		6DBA5540248E6CA300751941 /* Sources */ = {
@@ -167,7 +167,7 @@
 			);
 			name = MBErrorKit;
 			packageProductDependencies = (
-				6D78361324AE27F3009F414E /* MobKitCore */,
+				6D78361E24AE2B1E009F414E /* MobKitCore */,
 			);
 			productName = ErrorKit;
 			productReference = 6DBA5526248E6C5300751941 /* MBErrorKit.framework */;
@@ -219,7 +219,7 @@
 			);
 			mainGroup = 6DBA551C248E6C5300751941;
 			packageReferences = (
-				6D78361224AE27F3009F414E /* XCRemoteSwiftPackageReference "MobKit" */,
+				6D78361D24AE2B1E009F414E /* XCRemoteSwiftPackageReference "MobKit" */,
 			);
 			productRefGroup = 6DBA5527248E6C5300751941 /* Products */;
 			projectDirPath = "";
@@ -429,7 +429,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = ErrorKit/Info.plist;
+				INFOPLIST_FILE = MBErrorKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -439,6 +439,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = mobven.com.ErrorKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -454,7 +455,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = ErrorKit/Info.plist;
+				INFOPLIST_FILE = MBErrorKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -464,6 +465,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = mobven.com.ErrorKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -475,7 +477,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RE9892F24F;
-				INFOPLIST_FILE = ErrorKitTests/Info.plist;
+				INFOPLIST_FILE = MBErrorKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -494,7 +496,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RE9892F24F;
-				INFOPLIST_FILE = ErrorKitTests/Info.plist;
+				INFOPLIST_FILE = MBErrorKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -540,7 +542,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		6D78361224AE27F3009F414E /* XCRemoteSwiftPackageReference "MobKit" */ = {
+		6D78361D24AE2B1E009F414E /* XCRemoteSwiftPackageReference "MobKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mobven/MobKit.git";
 			requirement = {
@@ -551,9 +553,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		6D78361324AE27F3009F414E /* MobKitCore */ = {
+		6D78361E24AE2B1E009F414E /* MobKitCore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 6D78361224AE27F3009F414E /* XCRemoteSwiftPackageReference "MobKit" */;
+			package = 6D78361D24AE2B1E009F414E /* XCRemoteSwiftPackageReference "MobKit" */;
 			productName = MobKitCore;
 		};
 /* End XCSwiftPackageProductDependency section */
