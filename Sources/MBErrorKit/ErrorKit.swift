@@ -49,6 +49,6 @@ public class ErrorKit: MobKitComponent {
     }
     
     /// Delegation for errors.
-    public weak var delegate: ErrorKitDelegate?
+    public weak var delegate: MBErrorKit.ErrorKitDelegate?
     
 }

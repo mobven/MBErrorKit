@@ -33,7 +33,7 @@ public enum NetworkingError: Error {
     case unkownError(Error?, Data?)
 }
 
-public extension NetworkingError {
+public extension MBErrorKit.NetworkingError {
     
     /// Title for the error.
     var errorTitle: String {
