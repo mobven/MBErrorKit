@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D7BE45024F7AE2A004A1C1B /* MobKitCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D7BE44F24F7AE2A004A1C1B /* MobKitCore.xcframework */; };
 		6D818F10249A02DF008943A1 /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D818F0F249A02DF008943A1 /* NetworkingError.swift */; };
 		6D818F5E249A880D008943A1 /* ErrorKitDelegateSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D818F5D249A880D008943A1 /* ErrorKitDelegateSpy.swift */; };
 		6DBA5530248E6C5400751941 /* MBErrorKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DBA5526248E6C5300751941 /* MBErrorKit.framework */; };
 		6DBA5537248E6C5400751941 /* ErrorKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 6DBA5529248E6C5300751941 /* ErrorKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6DBA554A248E6CC800751941 /* ErrorKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA5545248E6CA300751941 /* ErrorKitTests.swift */; };
 		6DBA554B248E6CE300751941 /* ErrorKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA5542248E6CA300751941 /* ErrorKit.swift */; };
-		6DCC747B24F79BB9006C3C24 /* MobKitCore in Frameworks */ = {isa = PBXBuildFile; productRef = 6DCC747A24F79BB9006C3C24 /* MobKitCore */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6D7BE44F24F7AE2A004A1C1B /* MobKitCore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = MobKitCore.xcframework; sourceTree = "<group>"; };
 		6D818F0F249A02DF008943A1 /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
 		6D818F5D249A880D008943A1 /* ErrorKitDelegateSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorKitDelegateSpy.swift; sourceTree = "<group>"; };
 		6DBA5526248E6C5300751941 /* MBErrorKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MBErrorKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,7 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6DCC747B24F79BB9006C3C24 /* MobKitCore in Frameworks */,
+				6D7BE45024F7AE2A004A1C1B /* MobKitCore.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +63,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6D7BE44E24F7AE2A004A1C1B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6D7BE44F24F7AE2A004A1C1B /* MobKitCore.xcframework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
 		6DBA551C248E6C5300751941 = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +81,7 @@
 				6DBA5540248E6CA300751941 /* Sources */,
 				6DBA5543248E6CA300751941 /* Tests */,
 				6DBA5527248E6C5300751941 /* Products */,
+				6D7BE44E24F7AE2A004A1C1B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -167,7 +177,6 @@
 			);
 			name = MBErrorKit;
 			packageProductDependencies = (
-				6DCC747A24F79BB9006C3C24 /* MobKitCore */,
 			);
 			productName = ErrorKit;
 			productReference = 6DBA5526248E6C5300751941 /* MBErrorKit.framework */;
@@ -219,7 +228,6 @@
 			);
 			mainGroup = 6DBA551C248E6C5300751941;
 			packageReferences = (
-				6DCC747924F79BB9006C3C24 /* XCRemoteSwiftPackageReference "MobKitCore" */,
 			);
 			productRefGroup = 6DBA5527248E6C5300751941 /* Products */;
 			projectDirPath = "";
@@ -540,25 +548,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		6DCC747924F79BB9006C3C24 /* XCRemoteSwiftPackageReference "MobKitCore" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/mobven/MobKitCore.git";
-			requirement = {
-				branch = develop;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		6DCC747A24F79BB9006C3C24 /* MobKitCore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 6DCC747924F79BB9006C3C24 /* XCRemoteSwiftPackageReference "MobKitCore" */;
-			productName = MobKitCore;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6DBA551D248E6C5300751941 /* Project object */;
 }
