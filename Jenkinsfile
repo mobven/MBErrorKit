@@ -116,6 +116,7 @@ node {
     }
 
     stage ('Jira') {
+        sh "bash ${SLACK_SH} '${env.STAGE_NAME}' '${ts}' ${SLACK_DATA}"
         def commitMessage =  sh ( 
             script: 'git log --format=format:%s -1', // find commitMessage
             returnStdout: true
