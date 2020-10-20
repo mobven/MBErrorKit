@@ -19,7 +19,8 @@ desc "Export xcframework"
 lane :export_xcframework do
   create_xcframework(
     project: 'MBErrorKit.xcodeproj',
-    scheme: 'MBErrorKit',
+    product_name: 'MBErrorKit',
+    scheme: 'MBErrorKit-Package',
     include_bitcode: true,
     destinations: ['iOS'],
     xcframework_output_directory: 'xcframework'
