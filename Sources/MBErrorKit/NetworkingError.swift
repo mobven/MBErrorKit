@@ -31,6 +31,9 @@ public enum NetworkingError: Error {
     
     /// Indicates a response failed unkown`Error`.
     case unkownError(Error?, Data?)
+
+    /// Called when data task is cancelled through `MBNetworking.NetworkableDataTasks.cancellAll()`
+    case dataTaskCancelled
 }
 
 public extension MBErrorKit.NetworkingError {
@@ -45,6 +48,7 @@ public extension MBErrorKit.NetworkingError {
         case .dataTaskError: return "Data Task Error"
         case .underlyingError: return "Underlying Error"
         case .unkownError: return "Unkown Error"
+        case .dataTaskCancelled: return "Data task cancelled"
         }
     }
     
@@ -58,6 +62,7 @@ public extension MBErrorKit.NetworkingError {
         case .dataTaskError(let response, _): return response
         case .underlyingError(_, let response, _): return response
         case .unkownError: return nil
+        case .dataTaskCancelled: return nil
         }
     }
     
@@ -71,6 +76,7 @@ public extension MBErrorKit.NetworkingError {
         case .dataTaskError(_, let data): return data
         case .underlyingError(_, _, let data): return data
         case .unkownError(_, let data): return data
+        case .dataTaskCancelled: return nil
         }
     }
     
@@ -78,17 +84,18 @@ public extension MBErrorKit.NetworkingError {
     var errorDescription: String {
         switch self {
         case .networkConnectionError(let error):
-            return "\n Colundn't connect internet network. \n\(error?.localizedDescription ?? "")"
+            return "Couldn't connect to internet with error: \(error?.localizedDescription ?? "")"
         case .decodingError(let error, _, _), .encodingError(let error, _):
             return error.localizedDescription
         case .httpError(let error, let response, _):
-            return "\nStatus Code: \(response.statusCode.description) \n\(error?.localizedDescription ?? "")\n"
+            return "HTTP error: \(response.statusCode.description), with description: \(error?.localizedDescription ?? "")"
         case .dataTaskError:
             return "Couldn't find data."
         case .underlyingError(let error, _, _):
             return error.localizedDescription
         case .unkownError(let error, _):
             return error?.localizedDescription ?? "Unkown Error"
+        case .dataTaskCancelled: return "Data task is cancelled"
         }
     }
     
